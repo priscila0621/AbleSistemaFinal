@@ -54,6 +54,7 @@
     </Compile>
     <Compile Include="Models\Employee.cs" />
     <Compile Include="Models\EmployeePayroll.cs" />
+    <Compile Include="Models\Payroll.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">

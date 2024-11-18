@@ -61,7 +61,7 @@
             this.BtnCancel.Location = new System.Drawing.Point(579, 385);
             this.BtnCancel.Name = "BtnCancel";
             this.BtnCancel.Size = new System.Drawing.Size(106, 30);
-            this.BtnCancel.TabIndex = 16;
+            this.BtnCancel.TabIndex = 12;
             this.BtnCancel.Text = "Cancelar";
             this.BtnCancel.UseVisualStyleBackColor = true;
             // 
@@ -70,7 +70,7 @@
             this.BtnSave.Location = new System.Drawing.Point(126, 389);
             this.BtnSave.Name = "BtnSave";
             this.BtnSave.Size = new System.Drawing.Size(106, 30);
-            this.BtnSave.TabIndex = 17;
+            this.BtnSave.TabIndex = 11;
             this.BtnSave.Text = "Guardar";
             this.BtnSave.UseVisualStyleBackColor = true;
             // 
@@ -95,7 +95,7 @@
             this.CbArea.Location = new System.Drawing.Point(318, 32);
             this.CbArea.Name = "CbArea";
             this.CbArea.Size = new System.Drawing.Size(118, 21);
-            this.CbArea.TabIndex = 4;
+            this.CbArea.TabIndex = 9;
             // 
             // TbID
             // 
@@ -103,7 +103,8 @@
             this.TbID.Location = new System.Drawing.Point(90, 27);
             this.TbID.Name = "TbID";
             this.TbID.Size = new System.Drawing.Size(83, 22);
-            this.TbID.TabIndex = 4;
+            this.TbID.TabIndex = 8;
+            this.TbID.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label1
             // 
@@ -130,7 +131,7 @@
             this.DtpHiringDate.Location = new System.Drawing.Point(236, 70);
             this.DtpHiringDate.Name = "DtpHiringDate";
             this.DtpHiringDate.Size = new System.Drawing.Size(200, 20);
-            this.DtpHiringDate.TabIndex = 5;
+            this.DtpHiringDate.TabIndex = 10;
             // 
             // label6
             // 
@@ -172,6 +173,7 @@
             this.TbAddress.Name = "TbAddress";
             this.TbAddress.Size = new System.Drawing.Size(655, 22);
             this.TbAddress.TabIndex = 7;
+            this.TbAddress.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label11
             // 
@@ -188,7 +190,7 @@
             this.DtpBirthdate.Location = new System.Drawing.Point(545, 81);
             this.DtpBirthdate.Name = "DtpBirthdate";
             this.DtpBirthdate.Size = new System.Drawing.Size(200, 20);
-            this.DtpBirthdate.TabIndex = 5;
+            this.DtpBirthdate.TabIndex = 4;
             // 
             // TbLastNames
             // 
@@ -196,7 +198,8 @@
             this.TbLastNames.Location = new System.Drawing.Point(520, 27);
             this.TbLastNames.Name = "TbLastNames";
             this.TbLastNames.Size = new System.Drawing.Size(224, 22);
-            this.TbLastNames.TabIndex = 4;
+            this.TbLastNames.TabIndex = 2;
+            this.TbLastNames.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label7
             // 
@@ -214,7 +217,8 @@
             this.TbEmail.Location = new System.Drawing.Point(442, 128);
             this.TbEmail.Name = "TbEmail";
             this.TbEmail.Size = new System.Drawing.Size(303, 22);
-            this.TbEmail.TabIndex = 4;
+            this.TbEmail.TabIndex = 6;
+            this.TbEmail.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // TbPhoneNumber
             // 
@@ -222,7 +226,8 @@
             this.TbPhoneNumber.Location = new System.Drawing.Point(141, 128);
             this.TbPhoneNumber.Name = "TbPhoneNumber";
             this.TbPhoneNumber.Size = new System.Drawing.Size(173, 22);
-            this.TbPhoneNumber.TabIndex = 4;
+            this.TbPhoneNumber.TabIndex = 5;
+            this.TbPhoneNumber.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // TbIdNumber
             // 
@@ -230,7 +235,8 @@
             this.TbIdNumber.Location = new System.Drawing.Point(126, 78);
             this.TbIdNumber.Name = "TbIdNumber";
             this.TbIdNumber.Size = new System.Drawing.Size(224, 22);
-            this.TbIdNumber.TabIndex = 4;
+            this.TbIdNumber.TabIndex = 3;
+            this.TbIdNumber.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label2
             // 
@@ -268,7 +274,8 @@
             this.TbNames.Location = new System.Drawing.Point(99, 29);
             this.TbNames.Name = "TbNames";
             this.TbNames.Size = new System.Drawing.Size(224, 22);
-            this.TbNames.TabIndex = 4;
+            this.TbNames.TabIndex = 1;
+            this.TbNames.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label8
             // 
@@ -299,6 +306,8 @@
             this.Controls.Add(this.BtnSave);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FrmEmployeeReg";
             this.Text = "FrmEmployeeReg";
             this.groupBox2.ResumeLayout(false);

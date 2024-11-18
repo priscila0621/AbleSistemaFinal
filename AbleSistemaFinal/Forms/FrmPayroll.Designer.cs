@@ -67,7 +67,7 @@
             this.BtnCalculate.Location = new System.Drawing.Point(116, 406);
             this.BtnCalculate.Name = "BtnCalculate";
             this.BtnCalculate.Size = new System.Drawing.Size(106, 30);
-            this.BtnCalculate.TabIndex = 20;
+            this.BtnCalculate.TabIndex = 7;
             this.BtnCalculate.Text = "Calcular";
             this.BtnCalculate.UseVisualStyleBackColor = true;
             // 
@@ -76,7 +76,7 @@
             this.BtnSave.Location = new System.Drawing.Point(568, 406);
             this.BtnSave.Name = "BtnSave";
             this.BtnSave.Size = new System.Drawing.Size(106, 30);
-            this.BtnSave.TabIndex = 21;
+            this.BtnSave.TabIndex = 8;
             this.BtnSave.Text = "Guardar";
             this.BtnSave.UseVisualStyleBackColor = true;
             // 
@@ -113,8 +113,9 @@
             this.TbName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TbName.Location = new System.Drawing.Point(269, 31);
             this.TbName.Name = "TbName";
-            this.TbName.Size = new System.Drawing.Size(86, 22);
-            this.TbName.TabIndex = 21;
+            this.TbName.Size = new System.Drawing.Size(213, 22);
+            this.TbName.TabIndex = 2;
+            this.TbName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // LblNetSalary
             // 
@@ -142,7 +143,8 @@
             this.TbOvertimePay.Location = new System.Drawing.Point(417, 77);
             this.TbOvertimePay.Name = "TbOvertimePay";
             this.TbOvertimePay.Size = new System.Drawing.Size(65, 22);
-            this.TbOvertimePay.TabIndex = 18;
+            this.TbOvertimePay.TabIndex = 4;
+            this.TbOvertimePay.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label13
             // 
@@ -180,7 +182,8 @@
             this.TbBonus.Location = new System.Drawing.Point(364, 142);
             this.TbBonus.Name = "TbBonus";
             this.TbBonus.Size = new System.Drawing.Size(65, 22);
-            this.TbBonus.TabIndex = 14;
+            this.TbBonus.TabIndex = 6;
+            this.TbBonus.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label9
             // 
@@ -271,7 +274,8 @@
             this.TbOvertime.Location = new System.Drawing.Point(629, 77);
             this.TbOvertime.Name = "TbOvertime";
             this.TbOvertime.Size = new System.Drawing.Size(65, 22);
-            this.TbOvertime.TabIndex = 9;
+            this.TbOvertime.TabIndex = 5;
+            this.TbOvertime.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label3
             // 
@@ -299,7 +303,8 @@
             this.TbBaseSalary.Location = new System.Drawing.Point(137, 81);
             this.TbBaseSalary.Name = "TbBaseSalary";
             this.TbBaseSalary.Size = new System.Drawing.Size(83, 22);
-            this.TbBaseSalary.TabIndex = 4;
+            this.TbBaseSalary.TabIndex = 3;
+            this.TbBaseSalary.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label2
             // 
@@ -317,7 +322,8 @@
             this.TbId.Location = new System.Drawing.Point(49, 31);
             this.TbId.Name = "TbId";
             this.TbId.Size = new System.Drawing.Size(86, 22);
-            this.TbId.TabIndex = 4;
+            this.TbId.TabIndex = 1;
+            this.TbId.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label8
             // 
@@ -361,6 +367,8 @@
             this.Controls.Add(this.BtnSave);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.menuStrip1);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FrmPayroll";
             this.Text = "FrmPayroll";
             this.groupBox1.ResumeLayout(false);

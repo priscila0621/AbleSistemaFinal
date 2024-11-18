@@ -96,6 +96,8 @@
             this.Controls.Add(this.BtnEdit);
             this.Controls.Add(this.DgvPayrollRegister);
             this.Controls.Add(this.menuStrip1);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FrmPayrollRegister";
             this.Text = "FrmPayrollRegister";
             ((System.ComponentModel.ISupportInitialize)(this.DgvPayrollRegister)).EndInit();

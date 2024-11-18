@@ -97,6 +97,8 @@
             this.Controls.Add(this.BtnDelete);
             this.Controls.Add(this.BtnEdit);
             this.Controls.Add(this.menuStrip1);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FrmRegister";
             this.Text = "FrmRegister";
             ((System.ComponentModel.ISupportInitialize)(this.DgvRegister)).EndInit();

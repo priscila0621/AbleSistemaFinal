@@ -78,6 +78,7 @@
             this.TbPw.PasswordChar = '*';
             this.TbPw.Size = new System.Drawing.Size(163, 22);
             this.TbPw.TabIndex = 17;
+            this.TbPw.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // TbId
             // 
@@ -86,6 +87,7 @@
             this.TbId.Name = "TbId";
             this.TbId.Size = new System.Drawing.Size(163, 22);
             this.TbId.TabIndex = 16;
+            this.TbId.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // pictureBox1
             // 
@@ -107,6 +109,8 @@
             this.Controls.Add(this.TbPw);
             this.Controls.Add(this.TbId);
             this.Controls.Add(this.pictureBox1);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FrmLogIn";
             this.Text = "FrmLogIn";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();

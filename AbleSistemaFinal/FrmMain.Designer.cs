@@ -130,7 +130,7 @@
             this.BtnPrincipal.Location = new System.Drawing.Point(12, 211);
             this.BtnPrincipal.Name = "BtnPrincipal";
             this.BtnPrincipal.Size = new System.Drawing.Size(179, 54);
-            this.BtnPrincipal.TabIndex = 0;
+            this.BtnPrincipal.TabIndex = 3;
             this.BtnPrincipal.Text = "  Dirección";
             this.BtnPrincipal.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtnPrincipal.UseVisualStyleBackColor = true;
@@ -146,7 +146,7 @@
             this.BtnAdministration.Location = new System.Drawing.Point(12, 151);
             this.BtnAdministration.Name = "BtnAdministration";
             this.BtnAdministration.Size = new System.Drawing.Size(179, 54);
-            this.BtnAdministration.TabIndex = 0;
+            this.BtnAdministration.TabIndex = 2;
             this.BtnAdministration.Text = "  Administración";
             this.BtnAdministration.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtnAdministration.UseVisualStyleBackColor = true;
@@ -162,7 +162,7 @@
             this.BtnCoordination.Location = new System.Drawing.Point(12, 91);
             this.BtnCoordination.Name = "BtnCoordination";
             this.BtnCoordination.Size = new System.Drawing.Size(179, 54);
-            this.BtnCoordination.TabIndex = 0;
+            this.BtnCoordination.TabIndex = 1;
             this.BtnCoordination.Text = "  Coordinación";
             this.BtnCoordination.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtnCoordination.UseVisualStyleBackColor = true;
@@ -175,8 +175,10 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FrmMain";
-            this.Text = "Form1";
+            this.Text = "Able";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();

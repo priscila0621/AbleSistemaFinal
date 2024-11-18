@@ -50,6 +50,12 @@
     <Compile Include="Dao\EmployeeService.cs" />
     <Compile Include="Dao\PayrollService.cs" />
     <Compile Include="Dao\UserService.cs" />
+    <Compile Include="Forms\FrmEmployeeReg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmEmployeeReg.Designer.cs">
+      <DependentUpon>FrmEmployeeReg.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FrmLogIn.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -68,6 +74,9 @@
     <Compile Include="Models\User.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\FrmEmployeeReg.resx">
+      <DependentUpon>FrmEmployeeReg.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmLogIn.resx">
       <DependentUpon>FrmLogIn.cs</DependentUpon>
     </EmbeddedResource>

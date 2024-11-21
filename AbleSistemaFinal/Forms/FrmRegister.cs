@@ -79,6 +79,8 @@ namespace AbleSistemaFinal.Forms
             DgvRegister.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
 
+        
+
         private void BtnDelete_Click(object sender, EventArgs e)
         {
             if (DgvRegister.SelectedRows.Count > 0)

@@ -55,6 +55,7 @@
             this.BtnDelete.TabIndex = 15;
             this.BtnDelete.Text = "Eliminar";
             this.BtnDelete.UseVisualStyleBackColor = true;
+            this.BtnDelete.Click += new System.EventHandler(this.BtnDelete_Click);
             // 
             // BtnEdit
             // 
@@ -64,6 +65,7 @@
             this.BtnEdit.TabIndex = 16;
             this.BtnEdit.Text = "Editar";
             this.BtnEdit.UseVisualStyleBackColor = true;
+            this.BtnEdit.Click += new System.EventHandler(this.BtnEdit_Click);
             // 
             // menuStrip1
             // 
@@ -81,6 +83,7 @@
             this.MnuRegister.Name = "MnuRegister";
             this.MnuRegister.Size = new System.Drawing.Size(126, 20);
             this.MnuRegister.Text = "Registrar empleados";
+            this.MnuRegister.Click += new System.EventHandler(this.MnuRegister_Click);
             // 
             // MnuSeeRegister
             // 

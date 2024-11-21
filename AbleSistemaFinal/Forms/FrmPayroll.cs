@@ -35,7 +35,9 @@ namespace AbleSistemaFinal.Forms
 
         }
 
-        private void BtnCalculate_Click(object sender, EventArgs e)
+
+
+        private void BtnCalculate_Click_1(object sender, EventArgs e)
         {
             string id = TbId.Text; // Cambiado de int a string
             string name = TbName.Text;
@@ -56,9 +58,7 @@ namespace AbleSistemaFinal.Forms
             LblNetSalary.Text = payroll.NetSalary.ToString("C", culture);
         }
 
-
-
-        private void BtnSave_Click(object sender, EventArgs e)
+        private void BtnSave_Click_1(object sender, EventArgs e)
         {
             try
             {
@@ -111,7 +111,6 @@ namespace AbleSistemaFinal.Forms
                 MessageBox.Show($"Ocurrió un error: {ex.Message}");
             }
         }
-
 
         private void MnuPayrollRegister_Click(object sender, EventArgs e)
         {

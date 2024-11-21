@@ -70,6 +70,7 @@
             this.BtnCalculate.TabIndex = 7;
             this.BtnCalculate.Text = "Calcular";
             this.BtnCalculate.UseVisualStyleBackColor = true;
+            this.BtnCalculate.Click += new System.EventHandler(this.BtnCalculate_Click_1);
             // 
             // BtnSave
             // 
@@ -79,6 +80,7 @@
             this.BtnSave.TabIndex = 8;
             this.BtnSave.Text = "Guardar";
             this.BtnSave.UseVisualStyleBackColor = true;
+            this.BtnSave.Click += new System.EventHandler(this.BtnSave_Click_1);
             // 
             // groupBox1
             // 
@@ -357,6 +359,7 @@
             this.MnuPayrollRegister.Name = "MnuPayrollRegister";
             this.MnuPayrollRegister.Size = new System.Drawing.Size(129, 20);
             this.MnuPayrollRegister.Text = "Registros de Nómina";
+            this.MnuPayrollRegister.Click += new System.EventHandler(this.MnuPayrollRegister_Click);
             // 
             // FrmPayroll
             // 

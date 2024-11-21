@@ -118,7 +118,6 @@ namespace AbleSistemaFinal.Forms
 
         private void BtnEdit_Click(object sender, EventArgs e)
         {
-
             if (DgvPayrollRegister.SelectedRows.Count > 0)
             {
                 // Obtiene el ID del registro seleccionado
@@ -145,7 +144,6 @@ namespace AbleSistemaFinal.Forms
             {
                 MessageBox.Show("Por favor, selecciona un registro para editar.");
             }
-
         }
 
         private void MnuPayroll_Click(object sender, EventArgs e)

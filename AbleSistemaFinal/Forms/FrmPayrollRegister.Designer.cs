@@ -46,6 +46,7 @@
             this.BtnDelete.TabIndex = 19;
             this.BtnDelete.Text = "Eliminar";
             this.BtnDelete.UseVisualStyleBackColor = true;
+            this.BtnDelete.Click += new System.EventHandler(this.BtnDelete_Click);
             // 
             // BtnEdit
             // 
@@ -55,6 +56,7 @@
             this.BtnEdit.TabIndex = 18;
             this.BtnEdit.Text = "Editar";
             this.BtnEdit.UseVisualStyleBackColor = true;
+            this.BtnEdit.Click += new System.EventHandler(this.BtnEdit_Click);
             // 
             // DgvPayrollRegister
             // 
@@ -80,6 +82,7 @@
             this.MnuPayroll.Name = "MnuPayroll";
             this.MnuPayroll.Size = new System.Drawing.Size(121, 20);
             this.MnuPayroll.Text = "Gestión de Nómina";
+            this.MnuPayroll.Click += new System.EventHandler(this.MnuPayroll_Click);
             // 
             // MnuPayrollRegister
             // 

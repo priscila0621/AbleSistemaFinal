@@ -20,8 +20,9 @@ namespace AbleSistemaFinal.Forms
             InitializeComponent();
             CbArea.Items.AddRange(new string[] { "Preescolar", "Primaria", "Mantenimiento", "Limpieza", "Coordinacion", "Direccion" });
         }
+                      
 
-        private void BtnSave_Click(object sender, EventArgs e)
+        private void BtnSave_Click_1(object sender, EventArgs e)
         {
             // Verificar si los datos son válidos antes de proceder
             if (!ValidarDatos())
@@ -87,13 +88,7 @@ namespace AbleSistemaFinal.Forms
 
         }
 
-        private void MnuSeeRegister_Click(object sender, EventArgs e)
-        {
-            FrmRegister registerForm = new FrmRegister();
-            registerForm.Show();
-        }
-
-        private void BtnCancel_Click(object sender, EventArgs e)
+        private void BtnCancel_Click_1(object sender, EventArgs e)
         {
             // Confirmar si el usuario desea salir sin guardar
             DialogResult result = MessageBox.Show("¿Está seguro de que desea salir sin guardar los cambios?",
@@ -106,7 +101,6 @@ namespace AbleSistemaFinal.Forms
                 this.Close(); // Cerrar el formulario
             }
         }
-
         private bool ValidarDatos()
         {
 
@@ -157,9 +151,12 @@ namespace AbleSistemaFinal.Forms
 
             return true;
         }
-        private void TbNames_TextChanged(object sender, EventArgs e)
-        {
 
+        private void MnuSeeRegister_Click_1(object sender, EventArgs e)
+        {
+            FrmRegister registerForm = new FrmRegister();
+            registerForm.Show();
         }
     }
+
 }

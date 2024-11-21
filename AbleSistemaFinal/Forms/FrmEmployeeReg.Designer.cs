@@ -52,8 +52,12 @@
             this.TbNames = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.MnuRegister = new System.Windows.Forms.ToolStripMenuItem();
+            this.MnuSeeRegister = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // BtnCancel
@@ -64,6 +68,7 @@
             this.BtnCancel.TabIndex = 12;
             this.BtnCancel.Text = "Cancelar";
             this.BtnCancel.UseVisualStyleBackColor = true;
+            this.BtnCancel.Click += new System.EventHandler(this.BtnCancel_Click_1);
             // 
             // BtnSave
             // 
@@ -73,6 +78,7 @@
             this.BtnSave.TabIndex = 11;
             this.BtnSave.Text = "Guardar";
             this.BtnSave.UseVisualStyleBackColor = true;
+            this.BtnSave.Click += new System.EventHandler(this.BtnSave_Click_1);
             // 
             // groupBox2
             // 
@@ -297,11 +303,36 @@
             this.label3.TabIndex = 3;
             this.label3.Text = "Fecha de Nacimiento:";
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.MnuRegister,
+            this.MnuSeeRegister});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
+            this.menuStrip1.TabIndex = 16;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // MnuRegister
+            // 
+            this.MnuRegister.Name = "MnuRegister";
+            this.MnuRegister.Size = new System.Drawing.Size(126, 20);
+            this.MnuRegister.Text = "Registrar empleados";
+            // 
+            // MnuSeeRegister
+            // 
+            this.MnuSeeRegister.Name = "MnuSeeRegister";
+            this.MnuSeeRegister.Size = new System.Drawing.Size(78, 20);
+            this.MnuSeeRegister.Text = "Ver registro";
+            this.MnuSeeRegister.Click += new System.EventHandler(this.MnuSeeRegister_Click_1);
+            // 
             // FrmEmployeeReg
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.BtnCancel);
             this.Controls.Add(this.BtnSave);
             this.Controls.Add(this.groupBox2);
@@ -314,7 +345,10 @@
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -344,5 +378,8 @@
         public System.Windows.Forms.TextBox TbNames;
         public System.Windows.Forms.Label label8;
         public System.Windows.Forms.Label label3;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem MnuRegister;
+        private System.Windows.Forms.ToolStripMenuItem MnuSeeRegister;
     }
 }

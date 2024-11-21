@@ -20,7 +20,7 @@ namespace AbleSistemaFinal.Forms
         }
 
 
-        private void BtnLogIn_Click_1(object sender, EventArgs e)
+        private void BtnLogIn_Click(object sender, EventArgs e)
         {
             string id = TbId.Text;
             string password = TbPw.Text;
@@ -69,11 +69,6 @@ namespace AbleSistemaFinal.Forms
             }
 
             this.Close();
-        }
-
-        private void FrmLogIn_Load(object sender, EventArgs e)
-        {
-            TbId.Focus();
         }
     }
 }

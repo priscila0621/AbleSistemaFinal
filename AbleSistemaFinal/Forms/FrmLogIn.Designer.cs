@@ -51,6 +51,7 @@
             this.BtnLogIn.TabIndex = 21;
             this.BtnLogIn.Text = "Ingresar";
             this.BtnLogIn.UseVisualStyleBackColor = false;
+            this.BtnLogIn.Click += new System.EventHandler(this.BtnLogIn_Click);
             // 
             // pictureBox3
             // 

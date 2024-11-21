@@ -134,6 +134,7 @@
             this.BtnPrincipal.Text = "  Dirección";
             this.BtnPrincipal.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtnPrincipal.UseVisualStyleBackColor = true;
+            this.BtnPrincipal.Click += new System.EventHandler(this.BtnPrincipal_Click_1);
             // 
             // BtnAdministration
             // 
@@ -150,6 +151,7 @@
             this.BtnAdministration.Text = "  Administración";
             this.BtnAdministration.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtnAdministration.UseVisualStyleBackColor = true;
+            this.BtnAdministration.Click += new System.EventHandler(this.BtnAdministration_Click_1);
             // 
             // BtnCoordination
             // 
@@ -166,6 +168,7 @@
             this.BtnCoordination.Text = "  Coordinación";
             this.BtnCoordination.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtnCoordination.UseVisualStyleBackColor = true;
+            this.BtnCoordination.Click += new System.EventHandler(this.BtnCoordination_Click_1);
             // 
             // FrmMain
             // 

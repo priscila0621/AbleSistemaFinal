@@ -20,7 +20,8 @@ namespace AbleSistemaFinal
             SidePanel.Top = BtnCoordination.Top;
         }
 
-        private void BtnCoordination_Click(object sender, EventArgs e)
+               
+        private void BtnCoordination_Click_1(object sender, EventArgs e)
         {
             OpenLogInForm("Coordinator");
             SidePanel.Height = BtnCoordination.Height;
@@ -29,7 +30,7 @@ namespace AbleSistemaFinal
             logInForm.Show();
         }
 
-        private void BtnAdministration_Click(object sender, EventArgs e)
+        private void BtnAdministration_Click_1(object sender, EventArgs e)
         {
             OpenLogInForm("Admin");
             SidePanel.Height = BtnAdministration.Height;
@@ -38,7 +39,7 @@ namespace AbleSistemaFinal
             logInForm.Show();
         }
 
-        private void BtnPrincipal_Click(object sender, EventArgs e)
+        private void BtnPrincipal_Click_1(object sender, EventArgs e)
         {
             OpenLogInForm("Principal");
             SidePanel.Height = BtnPrincipal.Height;
@@ -46,7 +47,6 @@ namespace AbleSistemaFinal
             FrmLogIn logInForm = new FrmLogIn();
             logInForm.Show();
         }
-
         // Método para abrir el formulario de inicio de sesión y pasar el rol de usuario esperado
         private void OpenLogInForm(string role)
         {
@@ -54,5 +54,6 @@ namespace AbleSistemaFinal
             logInForm.Tag = role; // Pasar el rol como información adicional al formulario de inicio de sesión
             logInForm.ShowDialog();
         }
+
     }
 }

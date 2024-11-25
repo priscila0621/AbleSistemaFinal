@@ -449,7 +449,7 @@ namespace AbleSistemaFinal.DataSet {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public RegistroDtRow AddRegistroDtRow(string EmployeeID, string Names, string LastNames, string IdNumber, string Birthdate, string PhoneNumber, string Email, string Address, string Area, string HiringDate) {
+            public RegistroDtRow AddRegistroDtRow(string EmployeeID, string Names, string LastNames, string IdNumber, System.DateTime Birthdate, int PhoneNumber, string Email, string Address, string Area, System.DateTime HiringDate) {
                 RegistroDtRow rowRegistroDtRow = ((RegistroDtRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         EmployeeID,
@@ -507,9 +507,9 @@ namespace AbleSistemaFinal.DataSet {
                 base.Columns.Add(this.columnLastNames);
                 this.columnIdNumber = new global::System.Data.DataColumn("IdNumber", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnIdNumber);
-                this.columnBirthdate = new global::System.Data.DataColumn("Birthdate", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columnBirthdate = new global::System.Data.DataColumn("Birthdate", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnBirthdate);
-                this.columnPhoneNumber = new global::System.Data.DataColumn("PhoneNumber", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columnPhoneNumber = new global::System.Data.DataColumn("PhoneNumber", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnPhoneNumber);
                 this.columnEmail = new global::System.Data.DataColumn("Email", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnEmail);
@@ -517,7 +517,7 @@ namespace AbleSistemaFinal.DataSet {
                 base.Columns.Add(this.columnAddress);
                 this.columnArea = new global::System.Data.DataColumn("Area", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnArea);
-                this.columnHiringDate = new global::System.Data.DataColumn("HiringDate", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columnHiringDate = new global::System.Data.DataColumn("HiringDate", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnHiringDate);
             }
             
@@ -725,10 +725,10 @@ namespace AbleSistemaFinal.DataSet {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string Birthdate {
+            public System.DateTime Birthdate {
                 get {
                     try {
-                        return ((string)(this[this.tableRegistroDt.BirthdateColumn]));
+                        return ((global::System.DateTime)(this[this.tableRegistroDt.BirthdateColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'Birthdate\' in table \'RegistroDt\' is DBNull.", e);
@@ -741,10 +741,10 @@ namespace AbleSistemaFinal.DataSet {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string PhoneNumber {
+            public int PhoneNumber {
                 get {
                     try {
-                        return ((string)(this[this.tableRegistroDt.PhoneNumberColumn]));
+                        return ((int)(this[this.tableRegistroDt.PhoneNumberColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'PhoneNumber\' in table \'RegistroDt\' is DBNull.", e);
@@ -805,10 +805,10 @@ namespace AbleSistemaFinal.DataSet {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string HiringDate {
+            public System.DateTime HiringDate {
                 get {
                     try {
-                        return ((string)(this[this.tableRegistroDt.HiringDateColumn]));
+                        return ((global::System.DateTime)(this[this.tableRegistroDt.HiringDateColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'HiringDate\' in table \'RegistroDt\' is DBNull.", e);

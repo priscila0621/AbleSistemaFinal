@@ -6,31 +6,34 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>1.52104cm</Width>
+              <Width>1.41521cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>5.91312cm</Width>
+              <Width>3.62541cm</Width>
+            </TablixColumn>
+            <TablixColumn>
+              <Width>4.48375cm</Width>
+            </TablixColumn>
+            <TablixColumn>
+              <Width>3.77cm</Width>
+            </TablixColumn>
+            <TablixColumn>
+              <Width>3.73cm</Width>
+            </TablixColumn>
+            <TablixColumn>
+              <Width>2.5cm</Width>
+            </TablixColumn>
+            <TablixColumn>
+              <Width>5cm</Width>
+            </TablixColumn>
+            <TablixColumn>
+              <Width>6.81271cm</Width>
             </TablixColumn>
             <TablixColumn>
               <Width>2.5cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.1825cm</Width>
-            </TablixColumn>
-            <TablixColumn>
-              <Width>2.5cm</Width>
-            </TablixColumn>
-            <TablixColumn>
-              <Width>2.5cm</Width>
-            </TablixColumn>
-            <TablixColumn>
-              <Width>3.39958cm</Width>
-            </TablixColumn>
-            <TablixColumn>
-              <Width>3.24083cm</Width>
-            </TablixColumn>
-            <TablixColumn>
-              <Width>2.5cm</Width>
+              <Width>3.71708cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -79,7 +82,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Nombre</Value>
+                              <Value>Nombres</Value>
                               <Style>
                                 <Color>White</Color>
                               </Style>
@@ -112,7 +115,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Salario Base</Value>
+                              <Value>Apellidos</Value>
                               <Style>
                                 <Color>White</Color>
                               </Style>
@@ -138,14 +141,14 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox17">
+                    <Textbox Name="Textbox13">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Horas extra</Value>
+                              <Value>Cédula</Value>
                               <Style>
                                 <Color>White</Color>
                               </Style>
@@ -154,7 +157,40 @@
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox17</rd:DefaultName>
+                      <rd:DefaultName>Textbox13</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <BackgroundColor>Brown</BackgroundColor>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox15">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>Fecha de nacimiento</Value>
+                              <Style>
+                                <Color>White</Color>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox15</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -178,7 +214,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Pago de horas extra</Value>
+                              <Value>N° de teléfono</Value>
                               <Style>
                                 <Color>White</Color>
                               </Style>
@@ -211,7 +247,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Bonus</Value>
+                              <Value>Email</Value>
                               <Style>
                                 <Color>White</Color>
                               </Style>
@@ -244,7 +280,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Deducción del INSS</Value>
+                              <Value>Dirección</Value>
                               <Style>
                                 <Color>White</Color>
                               </Style>
@@ -277,7 +313,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Deducción del IRD</Value>
+                              <Value>Área</Value>
                               <Style>
                                 <Color>White</Color>
                               </Style>
@@ -310,7 +346,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Salario Total</Value>
+                              <Value>Fehca de contratación</Value>
                               <Style>
                                 <Color>White</Color>
                               </Style>
@@ -341,21 +377,21 @@
               <TablixCells>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Id">
+                    <Textbox Name="EmployeeID">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!Id.Value</Value>
+                              <Value>=Fields!EmployeeID.Value</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Id</rd:DefaultName>
+                      <rd:DefaultName>EmployeeID</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -371,21 +407,21 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Name">
+                    <Textbox Name="Names">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!Name.Value</Value>
+                              <Value>=Fields!Names.Value</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Name</rd:DefaultName>
+                      <rd:DefaultName>Names</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -401,53 +437,21 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="BaseSalary">
+                    <Textbox Name="LastNames">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!BaseSalary.Value</Value>
-                              <Style />
-                            </TextRun>
-                          </TextRuns>
-                          <Style>
-                            <TextAlign>Right</TextAlign>
-                          </Style>
-                        </Paragraph>
-                      </Paragraphs>
-                      <rd:DefaultName>BaseSalary</rd:DefaultName>
-                      <Style>
-                        <Border>
-                          <Color>LightGrey</Color>
-                          <Style>Solid</Style>
-                        </Border>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                    </Textbox>
-                  </CellContents>
-                </TablixCell>
-                <TablixCell>
-                  <CellContents>
-                    <Textbox Name="OvertimeHours">
-                      <CanGrow>true</CanGrow>
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value>=Fields!OvertimeHours.Value</Value>
+                              <Value>=Fields!LastNames.Value</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>OvertimeHours</rd:DefaultName>
+                      <rd:DefaultName>LastNames</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -463,53 +467,21 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="OvertimePayRate">
+                    <Textbox Name="IdNumber">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!OvertimePayRate.Value</Value>
-                              <Style />
-                            </TextRun>
-                          </TextRuns>
-                          <Style>
-                            <TextAlign>Right</TextAlign>
-                          </Style>
-                        </Paragraph>
-                      </Paragraphs>
-                      <rd:DefaultName>OvertimePayRate</rd:DefaultName>
-                      <Style>
-                        <Border>
-                          <Color>LightGrey</Color>
-                          <Style>Solid</Style>
-                        </Border>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                    </Textbox>
-                  </CellContents>
-                </TablixCell>
-                <TablixCell>
-                  <CellContents>
-                    <Textbox Name="Bonus">
-                      <CanGrow>true</CanGrow>
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value>=Fields!Bonus.Value</Value>
+                              <Value>=Fields!IdNumber.Value</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Bonus</rd:DefaultName>
+                      <rd:DefaultName>IdNumber</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -525,21 +497,21 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="INSSDeduction">
+                    <Textbox Name="Birthdate">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!INSSDeduction.Value</Value>
+                              <Value>=Fields!Birthdate.Value</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>INSSDeduction</rd:DefaultName>
+                      <rd:DefaultName>Birthdate</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -555,21 +527,21 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="IRDeduction">
+                    <Textbox Name="PhoneNumber">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!IRDeduction.Value</Value>
+                              <Value>=Fields!PhoneNumber.Value</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>IRDeduction</rd:DefaultName>
+                      <rd:DefaultName>PhoneNumber</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -585,23 +557,111 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="TotalSalary">
+                    <Textbox Name="Email">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!TotalSalary.Value</Value>
+                              <Value>=Fields!Email.Value</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
-                          <Style>
-                            <TextAlign>Right</TextAlign>
-                          </Style>
+                          <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>TotalSalary</rd:DefaultName>
+                      <rd:DefaultName>Email</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Address">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Fields!Address.Value</Value>
+                              <Style />
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Address</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Area">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Fields!Area.Value</Value>
+                              <Style />
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Area</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="HiringDate">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Fields!HiringDate.Value</Value>
+                              <Style />
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>HiringDate</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -630,6 +690,7 @@
             <TablixMember />
             <TablixMember />
             <TablixMember />
+            <TablixMember />
           </TablixMembers>
         </TablixColumnHierarchy>
         <TablixRowHierarchy>
@@ -642,11 +703,11 @@
             </TablixMember>
           </TablixMembers>
         </TablixRowHierarchy>
-        <DataSetName>DsPayroll</DataSetName>
-        <Top>0.73766cm</Top>
-        <Left>0.98573cm</Left>
+        <DataSetName>DsEmployee</DataSetName>
+        <Top>0.68474cm</Top>
+        <Left>0.41813cm</Left>
         <Height>1.2cm</Height>
-        <Width>26.25708cm</Width>
+        <Width>37.55416cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -670,10 +731,10 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox10</rd:DefaultName>
-        <Top>2.24cm</Top>
-        <Left>24.74281cm</Left>
+        <Top>1.88708cm</Top>
+        <Left>34.25521cm</Left>
         <Height>0.6cm</Height>
-        <Width>2.5cm</Width>
+        <Width>3.71708cm</Width>
         <ZIndex>1</ZIndex>
         <Style>
           <Border>
@@ -686,13 +747,13 @@
         </Style>
       </Textbox>
     </ReportItems>
-    <Height>1.33333in</Height>
+    <Height>1.10417in</Height>
     <Style />
   </Body>
-  <Width>11.52083in</Width>
+  <Width>15.14764in</Width>
   <Page>
     <PageHeader>
-      <Height>2.54cm</Height>
+      <Height>1.98437cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
@@ -703,7 +764,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>Reporte de Nómina</Value>
+                  <Value>Reporte de Registro de Empleado</Value>
                   <Style>
                     <FontFamily>Cooper Black</FontFamily>
                     <FontSize>16pt</FontSize>
@@ -714,10 +775,10 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox11</rd:DefaultName>
-          <Top>1.44625cm</Top>
-          <Left>0.98573cm</Left>
+          <Top>0.81132cm</Top>
+          <Left>0.41813cm</Left>
           <Height>0.91736cm</Height>
-          <Width>7.97687cm</Width>
+          <Width>10.04062cm</Width>
           <Style>
             <Border>
               <Style>None</Style>
@@ -745,10 +806,10 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox32</rd:DefaultName>
-          <Top>1.44625cm</Top>
-          <Left>24.74281cm</Left>
+          <Top>1.20799cm</Top>
+          <Left>34.25521cm</Left>
           <Height>0.6cm</Height>
-          <Width>2.5cm</Width>
+          <Width>3.71708cm</Width>
           <ZIndex>1</ZIndex>
           <Style>
             <Border>
@@ -768,7 +829,7 @@
       </Style>
     </PageHeader>
     <PageFooter>
-      <Height>1.87854cm</Height>
+      <Height>1.95792cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
@@ -789,10 +850,10 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>TotalPages</rd:DefaultName>
-          <Top>0.62604cm</Top>
-          <Left>24.74281cm</Left>
+          <Top>0.67896cm</Top>
+          <Left>34.25521cm</Left>
           <Height>0.6cm</Height>
-          <Width>2.5cm</Width>
+          <Width>3.71708cm</Width>
           <Style>
             <Border>
               <Style>None</Style>
@@ -821,62 +882,66 @@
   </Page>
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
-    <DataSource Name="DsNomina">
+    <DataSource Name="DsEmpleado">
       <ConnectionProperties>
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>b657fe3a-47d0-4acd-80e7-c4946d12ae39</rd:DataSourceID>
+      <rd:DataSourceID>ec52104c-814a-4506-add3-c613b06b9d8b</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
-    <DataSet Name="DsPayroll">
+    <DataSet Name="DsEmployee">
       <Query>
-        <DataSourceName>DsNomina</DataSourceName>
+        <DataSourceName>DsEmpleado</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
-        <Field Name="Id">
-          <DataField>Id</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="Name">
-          <DataField>Name</DataField>
+        <Field Name="EmployeeID">
+          <DataField>EmployeeID</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="BaseSalary">
-          <DataField>BaseSalary</DataField>
-          <rd:TypeName>System.Decimal</rd:TypeName>
+        <Field Name="Names">
+          <DataField>Names</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="OvertimeHours">
-          <DataField>OvertimeHours</DataField>
-          <rd:TypeName>System.Decimal</rd:TypeName>
+        <Field Name="LastNames">
+          <DataField>LastNames</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="OvertimePayRate">
-          <DataField>OvertimePayRate</DataField>
-          <rd:TypeName>System.Decimal</rd:TypeName>
+        <Field Name="IdNumber">
+          <DataField>IdNumber</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="Bonus">
-          <DataField>Bonus</DataField>
-          <rd:TypeName>System.Decimal</rd:TypeName>
+        <Field Name="Birthdate">
+          <DataField>Birthdate</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
         </Field>
-        <Field Name="INSSDeduction">
-          <DataField>INSSDeduction</DataField>
-          <rd:TypeName>System.Decimal</rd:TypeName>
+        <Field Name="PhoneNumber">
+          <DataField>PhoneNumber</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
-        <Field Name="IRDeduction">
-          <DataField>IRDeduction</DataField>
-          <rd:TypeName>System.Decimal</rd:TypeName>
+        <Field Name="Email">
+          <DataField>Email</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="TotalSalary">
-          <DataField>TotalSalary</DataField>
-          <rd:TypeName>System.Decimal</rd:TypeName>
+        <Field Name="Address">
+          <DataField>Address</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Area">
+          <DataField>Area</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="HiringDate">
+          <DataField>HiringDate</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
         </Field>
       </Fields>
       <rd:DataSetInfo>
-        <rd:DataSetName>DsNomina</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\Kagab\Desktop\sistema able ahora si\AbleSistemaFinal\DataSet\DsNomina.xsd</rd:SchemaPath>
-        <rd:TableName>PayrollDt</rd:TableName>
+        <rd:DataSetName>DsEmpleado</rd:DataSetName>
+        <rd:SchemaPath>C:\Users\Kagab\Desktop\sistema able ahora si\AbleSistemaFinal\DataSet\DsEmpleado.xsd</rd:SchemaPath>
+        <rd:TableName>RegistroDt</rd:TableName>
         <rd:TableAdapterFillMethod />
         <rd:TableAdapterGetDataMethod />
         <rd:TableAdapterName />
@@ -884,5 +949,5 @@
     </DataSet>
   </DataSets>
   <rd:ReportUnitType>Cm</rd:ReportUnitType>
-  <rd:ReportID>b72842ed-d790-44db-aba7-1caf4b5bed86</rd:ReportID>
+  <rd:ReportID>1d1d2301-6782-46ce-9c73-bf86d25ebbd3</rd:ReportID>
 </Report>

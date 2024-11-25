@@ -157,6 +157,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Reports\RptEmployeeRegister.rdlc" />
     <EmbeddedResource Include="Reports\RptPayroll.rdlc" />
     <None Include="DataSet\DsEmpleado.xsc">
       <DependentUpon>DsEmpleado.xsd</DependentUpon>

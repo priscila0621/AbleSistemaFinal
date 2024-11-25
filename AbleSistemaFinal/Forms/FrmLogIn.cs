@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using AbleSistemaFinal.Dao;
 using AbleSistemaFinal.Models;
+using AbleSistemaFinal.Services;
 
 namespace AbleSistemaFinal.Forms
 {
@@ -56,11 +57,16 @@ namespace AbleSistemaFinal.Forms
                     break;
                 case "Admin":
                     // Crear los objetos necesarios para FrmPayroll
-                    Payroll payroll = new Payroll(); // Aquí deberías inicializar los datos correctamente
-                    EmployeePayrollService employeePayrollService = new EmployeePayrollService(); // Asegúrate de tener el servicio configurado
+                    PayrollDao payrollDao = new PayrollDao(); // Clase que administra la lista de empleados
+                    PayrollService payrollService = new PayrollService(); // Clase que realiza cálculos y lógica de negocio
 
-                    FrmPayroll payrollForm = new FrmPayroll(payroll, employeePayrollService);  // Pasar los objetos al constructor
-                    payrollForm.ShowDialog();  // Mostrar el formulario de nómina
+                    // Crear una instancia del formulario FrmPayroll, pasando los objetos necesarios
+                    FrmPayroll payrollForm = new FrmPayroll();
+
+                    // Mostrar el formulario de nómina
+                    payrollForm.ShowDialog();
+
+                    // Salir del flujo actual si es parte de un menú u otro sistema
                     break;
                 case "Principal":
                     MessageBox.Show("Bienvenida, Directora.");

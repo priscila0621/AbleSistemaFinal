@@ -1,5 +1,6 @@
 ﻿using AbleSistemaFinal.Dao;
 using AbleSistemaFinal.Models;
+using AbleSistemaFinal.Services;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,107 +16,103 @@ namespace AbleSistemaFinal.Forms
 {
     public partial class FrmPayroll : Form
     {
-        private readonly Payroll _currentPayroll;
-        private readonly EmployeePayrollService _employeePayrollService;
-        public FrmPayroll(Payroll payroll, EmployeePayrollService employeePayrollService)
+        private PayrollDao payrollDao = new PayrollDao();
+        private PayrollService payrollService = new PayrollService();
+
+        public FrmPayroll()
         {
             InitializeComponent();
-
-            _currentPayroll = payroll;
-            _employeePayrollService = employeePayrollService;
-
-            // Carga los datos en los campos para editar
-            TbId.Text = payroll.Id;
-            TbName.Text = payroll.Name;
-            TbBaseSalary.Text = payroll.BaseSalary.ToString();
-            TbOvertimePay.Text = payroll.OvertimeRate.ToString();
-            TbOvertime.Text = payroll.OvertimeHours.ToString();
-            TbBonus.Text = payroll.Bonus.ToString();
-
-
         }
 
-
-
-        private void BtnCalculate_Click_1(object sender, EventArgs e)
-        {
-            string id = TbId.Text; // Cambiado de int a string
-            string name = TbName.Text;
-            decimal baseSalary = decimal.Parse(TbBaseSalary.Text);
-            decimal overtimeRate = decimal.Parse(TbOvertimePay.Text);
-            int overtimeHours = int.Parse(TbOvertime.Text);
-            decimal bonus = decimal.Parse(TbBonus.Text);
-
-            Payroll payroll = _employeePayrollService.CalculatePayroll(id, name, baseSalary, overtimeRate, overtimeHours, bonus);
-
-            // Usa la cultura "en-US" para formatear en dólares
-            var culture = new CultureInfo("en-US");
-
-            LblOvertimePayment.Text = payroll.OvertimePayment.ToString("C", culture);
-            LblSalary.Text = payroll.TotalSalary.ToString("C", culture);
-            LblINSS.Text = payroll.INSS.ToString("C", culture);
-            LblIR.Text = payroll.IR.ToString("C", culture);
-            LblNetSalary.Text = payroll.NetSalary.ToString("C", culture);
-        }
 
         private void BtnSave_Click_1(object sender, EventArgs e)
         {
             try
             {
-                // Obtiene los valores ingresados
-                string id = TbId.Text;
-                string name = TbName.Text;
-                decimal baseSalary = decimal.Parse(TbBaseSalary.Text);
-                decimal overtimeRate = decimal.Parse(TbOvertimePay.Text);
-                int overtimeHours = int.Parse(TbOvertime.Text);
-                decimal bonus = decimal.Parse(TbBonus.Text);
-
-                // Verifica si es un registro nuevo o una edición
-                if (_currentPayroll == null)
+                // Crear el modelo desde los datos del formulario
+                var employee = new EmployeePayroll
                 {
-                    // Nuevo registro
-                    Payroll payroll = _employeePayrollService.CalculatePayroll(id, name, baseSalary, overtimeRate, overtimeHours, bonus);
-                    _employeePayrollService.AddPayrollRecord(payroll);
-                    MessageBox.Show("Registro guardado exitosamente.");
-                }
-                else
-                {
-                    // Edición de un registro existente
-                    _currentPayroll.Name = name;
-                    _currentPayroll.BaseSalary = baseSalary;
-                    _currentPayroll.OvertimeRate = overtimeRate;
-                    _currentPayroll.OvertimeHours = overtimeHours;
-                    _currentPayroll.Bonus = bonus;
+                    Id = TbId.Text,
+                    Name = TbName.Text,
+                    BaseSalary = decimal.Parse(TbBaseSalary.Text),
+                    OvertimeHours = decimal.Parse(TbOvertime.Text),
+                    OvertimePayRate = decimal.Parse(TbOvertimePay.Text),
+                    Bonus = decimal.Parse(TbBonus.Text)
+                };
 
-                    // Recalcula los valores usando el servicio
-                    _currentPayroll.TotalSalary = _currentPayroll.BaseSalary +
-                        _employeePayrollService.CalculateOvertimePayment(_currentPayroll.OvertimeRate, _currentPayroll.OvertimeHours) + _currentPayroll.Bonus;
+                // Calcular el pago por horas extras
+                decimal overtimePayment = employee.OvertimeHours * employee.OvertimePayRate;
 
-                    _currentPayroll.INSS = _employeePayrollService.CalculateINSS(_currentPayroll.TotalSalary);
-                    _currentPayroll.IR = _employeePayrollService.CalculateIR(_currentPayroll.TotalSalary - _currentPayroll.INSS);
-                    _currentPayroll.NetSalary = _employeePayrollService.CalculateNetSalary(_currentPayroll.TotalSalary, _currentPayroll.INSS, _currentPayroll.IR);
+                // Calcular el salario bruto (sin deducciones)
+                decimal grossSalary = employee.BaseSalary + overtimePayment + employee.Bonus;
 
-                    // Actualiza el registro en la lista
-                    _employeePayrollService.UpdatePayrollRecord(_currentPayroll);
-                    MessageBox.Show("Registro actualizado exitosamente.");
-                }
+                // Calcular deducciones
+                payrollService.CalculateDeductions(employee);
 
+                // Calcular el salario neto (bruto - deducciones)
+                decimal netSalary = grossSalary - (employee.INSSDeduction + employee.IRDeduction);
 
+                // Asignar valores calculados al modelo
+                employee.TotalSalary = netSalary;
+
+                // Guardar en la lista
+                payrollDao.AddEmployee(employee);
+
+                // Mostrar deducciones y cálculos en etiquetas
+                LblOvertimePayment.Text = overtimePayment.ToString("C");
+                LblSalary.Text = grossSalary.ToString("C");
+                LblNetSalary.Text = netSalary.ToString("C");
+                LblINSS.Text = employee.INSSDeduction.ToString("C");
+                LblIR.Text = employee.IRDeduction.ToString("C");
+
+                MessageBox.Show("Guardado con éxito");
             }
             catch (FormatException)
             {
-                MessageBox.Show("Por favor, asegúrese de que todos los campos numéricos tengan valores válidos.");
+                MessageBox.Show("Por favor, ingrese valores numéricos válidos en los campos de salario, horas extra, tarifa y bonificación.", "Error de entrada");
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Ocurrió un error: {ex.Message}");
+                MessageBox.Show($"Ocurrió un error: {ex.Message}", "Error");
             }
+
         }
 
         private void MnuPayrollRegister_Click(object sender, EventArgs e)
         {
-            FrmPayrollRegister frmPayrollRegister = new FrmPayrollRegister(_employeePayrollService);
-            frmPayrollRegister.Show();
+            // Abrir el formulario de registro
+            var registerForm = new FrmPayrollRegister(payrollDao);
+            registerForm.ShowDialog();
+        }
+
+        private void BtnCancel_Click(object sender, EventArgs e)
+        {
+            ClearForm();
+        }
+        private void ClearForm()
+        {
+            TbId.Text = "";
+            TbName.Text = "";
+            TbBaseSalary.Text = "";
+            TbOvertime.Text = "";
+            TbOvertimePay.Text = "";
+            TbBonus.Text = "";
+            LblINSS.Text = "";
+            LblIR.Text = "";
+        }
+        public void LoadEmployeeData(EmployeePayroll employee)
+        {
+            // Llenar los campos del formulario con los datos del empleado
+            TbId.Text = employee.Id;
+            TbName.Text = employee.Name;
+            TbBaseSalary.Text = employee.BaseSalary.ToString();
+            TbOvertime.Text = employee.OvertimeHours.ToString();
+            TbOvertimePay.Text = employee.OvertimePayRate.ToString();
+            TbBonus.Text = employee.Bonus.ToString();
+
+            // Mostrar deducciones existentes
+            LblINSS.Text = employee.INSSDeduction.ToString("C");
+            LblIR.Text = employee.IRDeduction.ToString("C");
         }
     }
 }

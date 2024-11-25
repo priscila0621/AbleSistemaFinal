@@ -728,22 +728,24 @@
             <PaddingBottom>2pt</PaddingBottom>
           </Style>
         </Textbox>
-        <Textbox Name="ExecutionTime">
+        <Textbox Name="Textbox32">
           <CanGrow>true</CanGrow>
           <KeepTogether>true</KeepTogether>
           <Paragraphs>
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>=Globals!ExecutionTime</Value>
+                  <Value>=Format(now, "dd/MM/yyy")</Value>
                   <Style />
                 </TextRun>
               </TextRuns>
-              <Style />
+              <Style>
+                <TextAlign>Right</TextAlign>
+              </Style>
             </Paragraph>
           </Paragraphs>
-          <rd:DefaultName>ExecutionTime</rd:DefaultName>
-          <Top>0.84349cm</Top>
+          <rd:DefaultName>Textbox32</rd:DefaultName>
+          <Top>1.44625cm</Top>
           <Left>24.74281cm</Left>
           <Height>0.6cm</Height>
           <Width>2.5cm</Width>

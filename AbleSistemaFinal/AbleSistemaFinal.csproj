@@ -68,6 +68,11 @@
     <Compile Include="Dao\EmployeeDao.cs" />
     <Compile Include="Dao\PayrollDao.cs" />
     <Compile Include="Dao\UserDao.cs" />
+    <Compile Include="DataSet\DsEmpleado.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DsEmpleado.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DataSet\DsNomina.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -153,6 +158,17 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Reports\RptPayroll.rdlc" />
+    <None Include="DataSet\DsEmpleado.xsc">
+      <DependentUpon>DsEmpleado.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet\DsEmpleado.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DsEmpleado.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet\DsEmpleado.xss">
+      <DependentUpon>DsEmpleado.xsd</DependentUpon>
+    </None>
     <None Include="DataSet\DsNomina.xsc">
       <DependentUpon>DsNomina.xsd</DependentUpon>
     </None>

@@ -166,5 +166,10 @@ namespace AbleSistemaFinal.Forms
             FrmEmployeeReg employeeregisterForm = new FrmEmployeeReg();
             employeeregisterForm.Show();
         }
+
+        private void BtnReportRegister_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -51,7 +51,7 @@ namespace AbleSistemaFinal.Forms
                 if (IsEditMode)
                 {
                     // Actualizar el empleado existente
-                    EmployeeService.UpdateEmployee(employee);
+                    EmployeeDao.UpdateEmployee(employee);
                     MessageBox.Show("Empleado actualizado exitosamente.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     // Resetear el modo de edición
@@ -60,7 +60,7 @@ namespace AbleSistemaFinal.Forms
                 else
                 {
                     // Agregar un nuevo empleado
-                    EmployeeService.AddEmployee(employee);
+                    EmployeeDao.AddEmployee(employee);
                     MessageBox.Show("Empleado registrado exitosamente.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
 

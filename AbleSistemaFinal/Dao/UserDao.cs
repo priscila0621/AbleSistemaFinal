@@ -7,7 +7,7 @@ using AbleSistemaFinal.Models;
 
 namespace AbleSistemaFinal.Dao
 {
-    public static class UserService
+    public static class UserDao
     {
         public static List<User> Users = new List<User>
         {

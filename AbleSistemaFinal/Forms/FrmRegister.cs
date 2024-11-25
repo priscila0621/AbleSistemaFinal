@@ -23,7 +23,7 @@ namespace AbleSistemaFinal.Forms
         private void LoadEmployees()
         {
             DgvRegister.Rows.Clear();
-            foreach (var employee in EmployeeService.GetAllEmployees())
+            foreach (var employee in EmployeeDao.GetAllEmployees())
             {
                 DgvRegister.Rows.Add(
                     employee.EmployeeID,
@@ -86,7 +86,7 @@ namespace AbleSistemaFinal.Forms
             if (DgvRegister.SelectedRows.Count > 0)
             {
                 string employeeId = DgvRegister.SelectedRows[0].Cells[0].Value.ToString();
-                EmployeeService.DeleteEmployee(employeeId);
+                EmployeeDao.DeleteEmployee(employeeId);
                 LoadEmployees();
                 MessageBox.Show("Empleado eliminado.");
             }
@@ -102,7 +102,7 @@ namespace AbleSistemaFinal.Forms
 
             // Obtener el ID del empleado seleccionado
             string employeeId = DgvRegister.SelectedRows[0].Cells["colEmployeeID"].Value.ToString();
-            var employee = EmployeeService.GetEmployee(employeeId);
+            var employee = EmployeeDao.GetEmployee(employeeId);
 
             if (employee == null)
             {
@@ -147,7 +147,7 @@ namespace AbleSistemaFinal.Forms
                 };
 
                 // Llamar al método UpdateEmployee para actualizar los datos
-                bool isUpdated = EmployeeService.UpdateEmployee(updatedEmployee);
+                bool isUpdated = EmployeeDao.UpdateEmployee(updatedEmployee);
 
                 if (isUpdated)
                 {

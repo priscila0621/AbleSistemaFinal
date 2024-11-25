@@ -33,7 +33,7 @@ namespace AbleSistemaFinal.Forms
                 return;
             }
 
-            User user = UserService.Authenticate(id, password);
+            User user = UserDao.Authenticate(id, password);
 
             if (user == null)
             {

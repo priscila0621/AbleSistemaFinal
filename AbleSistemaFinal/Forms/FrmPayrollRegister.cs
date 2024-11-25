@@ -1,5 +1,6 @@
 ﻿using AbleSistemaFinal.Dao;
 using AbleSistemaFinal.Models;
+using Microsoft.Reporting.WinForms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -88,6 +89,22 @@ namespace AbleSistemaFinal.Forms
         private void MnuPayroll_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void BtnReportPayroll_Click(object sender, EventArgs e)
+        {
+            ReportDataSource dataSource = new ReportDataSource("DsPayroll", DgvPayrollRegister);
+
+            FrmReport frmReport = new FrmReport();
+            frmReport.reportViewer1.LocalReport.DataSources.Clear();
+            frmReport.reportViewer1.LocalReport.DataSources.Add(dataSource);
+            //Configurar archivo reporte
+            frmReport.reportViewer1.LocalReport.ReportEmbeddedResource = "AbleSistemaFinal.Reports.RptPayroll.rdlc";
+            //Refrescar reporte
+            frmReport.reportViewer1.RefreshReport();
+
+            //Visualizar formulario
+            frmReport.ShowDialog();
         }
     }
 }

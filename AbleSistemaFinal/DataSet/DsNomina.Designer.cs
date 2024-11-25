@@ -439,7 +439,7 @@ namespace AbleSistemaFinal.DataSet {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public PayrollDtRow AddPayrollDtRow(int Id, string Name, decimal BaseSalary, decimal OvertimeHours, string OvertimePayRate, string Bonus, string INSSDeduction, string IRDeduction, string TotalSalary) {
+            public PayrollDtRow AddPayrollDtRow(int Id, string Name, decimal BaseSalary, decimal OvertimeHours, decimal OvertimePayRate, decimal Bonus, decimal INSSDeduction, decimal IRDeduction, decimal TotalSalary) {
                 PayrollDtRow rowPayrollDtRow = ((PayrollDtRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         Id,
@@ -495,15 +495,15 @@ namespace AbleSistemaFinal.DataSet {
                 base.Columns.Add(this.columnBaseSalary);
                 this.columnOvertimeHours = new global::System.Data.DataColumn("OvertimeHours", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnOvertimeHours);
-                this.columnOvertimePayRate = new global::System.Data.DataColumn("OvertimePayRate", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columnOvertimePayRate = new global::System.Data.DataColumn("OvertimePayRate", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnOvertimePayRate);
-                this.columnBonus = new global::System.Data.DataColumn("Bonus", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columnBonus = new global::System.Data.DataColumn("Bonus", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnBonus);
-                this.columnINSSDeduction = new global::System.Data.DataColumn("INSSDeduction", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columnINSSDeduction = new global::System.Data.DataColumn("INSSDeduction", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnINSSDeduction);
-                this.columnIRDeduction = new global::System.Data.DataColumn("IRDeduction", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columnIRDeduction = new global::System.Data.DataColumn("IRDeduction", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnIRDeduction);
-                this.columnTotalSalary = new global::System.Data.DataColumn("TotalSalary", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columnTotalSalary = new global::System.Data.DataColumn("TotalSalary", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnTotalSalary);
                 this.columnBaseSalary.Caption = "TotalSalary";
                 this.columnOvertimeHours.Caption = "NetSalary";
@@ -713,10 +713,10 @@ namespace AbleSistemaFinal.DataSet {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string OvertimePayRate {
+            public decimal OvertimePayRate {
                 get {
                     try {
-                        return ((string)(this[this.tablePayrollDt.OvertimePayRateColumn]));
+                        return ((decimal)(this[this.tablePayrollDt.OvertimePayRateColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'OvertimePayRate\' in table \'PayrollDt\' is DBNull.", e);
@@ -729,10 +729,10 @@ namespace AbleSistemaFinal.DataSet {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string Bonus {
+            public decimal Bonus {
                 get {
                     try {
-                        return ((string)(this[this.tablePayrollDt.BonusColumn]));
+                        return ((decimal)(this[this.tablePayrollDt.BonusColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'Bonus\' in table \'PayrollDt\' is DBNull.", e);
@@ -745,10 +745,10 @@ namespace AbleSistemaFinal.DataSet {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string INSSDeduction {
+            public decimal INSSDeduction {
                 get {
                     try {
-                        return ((string)(this[this.tablePayrollDt.INSSDeductionColumn]));
+                        return ((decimal)(this[this.tablePayrollDt.INSSDeductionColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'INSSDeduction\' in table \'PayrollDt\' is DBNull.", e);
@@ -761,10 +761,10 @@ namespace AbleSistemaFinal.DataSet {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string IRDeduction {
+            public decimal IRDeduction {
                 get {
                     try {
-                        return ((string)(this[this.tablePayrollDt.IRDeductionColumn]));
+                        return ((decimal)(this[this.tablePayrollDt.IRDeductionColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'IRDeduction\' in table \'PayrollDt\' is DBNull.", e);
@@ -777,10 +777,10 @@ namespace AbleSistemaFinal.DataSet {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string TotalSalary {
+            public decimal TotalSalary {
                 get {
                     try {
-                        return ((string)(this[this.tablePayrollDt.TotalSalaryColumn]));
+                        return ((decimal)(this[this.tablePayrollDt.TotalSalaryColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'TotalSalary\' in table \'PayrollDt\' is DBNull.", e);

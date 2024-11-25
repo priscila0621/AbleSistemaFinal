@@ -10,17 +10,30 @@ namespace AbleSistemaFinal.Dao
     public class EmployeePayrollDao
     {
         private const decimal INSSRate = 0.07m; // 7% de deducción por INSS
-        private const decimal IRThreshold = 100000m; // Umbral para aplicar IR
+        private const decimal IRThreshold = 8333.33m; // Exención de IR (mensual)
+        private const decimal IRRate = 0.15m; // Tasa IR del 15%
 
         public EmployeePayroll CalculateDeductions(EmployeePayroll employee)
         {
-            employee.INSSDeduction = employee.BaseSalary * INSSRate;
-
-            decimal taxableIncome = employee.BaseSalary - employee.INSSDeduction + employee.Bonus;
-            employee.IRDeduction = taxableIncome > IRThreshold ? (taxableIncome - IRThreshold) * 0.15m : 0;
-
+            // Calcular el pago por horas extras
             decimal overtimePay = employee.OvertimeHours * employee.OvertimePayRate;
-            employee.TotalSalary = employee.BaseSalary + overtimePay + employee.Bonus - employee.INSSDeduction - employee.IRDeduction;
+
+            // Calcular el salario bruto (Base + Horas Extras + Bonificaciones)
+            decimal grossSalary = employee.BaseSalary + overtimePay + employee.Bonus;
+
+            // Calcular deducción por INSS
+            employee.INSSDeduction = grossSalary * INSSRate;
+
+            // Calcular la base imponible para IR (Salario Bruto - INSS)
+            decimal taxableIncome = grossSalary - employee.INSSDeduction;
+
+            // Calcular deducción por IR si excede el umbral
+            employee.IRDeduction = taxableIncome > IRThreshold
+                ? (taxableIncome - IRThreshold) * IRRate
+                : 0;
+
+            // Calcular el salario neto (Salario Bruto - Deducciones)
+            employee.TotalSalary = grossSalary - employee.INSSDeduction - employee.IRDeduction;
 
             return employee;
         }

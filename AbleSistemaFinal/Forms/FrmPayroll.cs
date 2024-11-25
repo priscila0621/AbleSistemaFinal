@@ -21,6 +21,9 @@ namespace AbleSistemaFinal.Forms
         public FrmPayroll()
         {
             InitializeComponent();
+            // Configurar la cultura a Español - Nicaragua
+            CultureInfo.DefaultThreadCurrentCulture = new CultureInfo("es-NI");
+            CultureInfo.DefaultThreadCurrentUICulture = new CultureInfo("es-NI");
         }
 
 

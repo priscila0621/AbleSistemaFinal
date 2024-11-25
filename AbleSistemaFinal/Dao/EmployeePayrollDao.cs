@@ -5,9 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using AbleSistemaFinal.Models;
 
-namespace AbleSistemaFinal.Services
+namespace AbleSistemaFinal.Dao
 {
-    public class PayrollService
+    public class EmployeePayrollDao
     {
         private const decimal INSSRate = 0.07m; // 7% de deducción por INSS
         private const decimal IRThreshold = 100000m; // Umbral para aplicar IR

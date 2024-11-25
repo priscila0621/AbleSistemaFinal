@@ -1,6 +1,5 @@
 ﻿using AbleSistemaFinal.Dao;
 using AbleSistemaFinal.Models;
-using AbleSistemaFinal.Services;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,7 +16,7 @@ namespace AbleSistemaFinal.Forms
     public partial class FrmPayroll : Form
     {
         private PayrollDao payrollDao = new PayrollDao();
-        private PayrollService payrollService = new PayrollService();
+        private EmployeePayrollDao payrollService = new EmployeePayrollDao();
 
         public FrmPayroll()
         {

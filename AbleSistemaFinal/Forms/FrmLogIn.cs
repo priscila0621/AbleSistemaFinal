@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using AbleSistemaFinal.Dao;
 using AbleSistemaFinal.Models;
-using AbleSistemaFinal.Services;
+
 
 namespace AbleSistemaFinal.Forms
 {
@@ -58,7 +58,7 @@ namespace AbleSistemaFinal.Forms
                 case "Admin":
                     // Crear los objetos necesarios para FrmPayroll
                     PayrollDao payrollDao = new PayrollDao(); // Clase que administra la lista de empleados
-                    PayrollService payrollService = new PayrollService(); // Clase que realiza cálculos y lógica de negocio
+                    EmployeePayrollDao payrollService = new EmployeePayrollDao(); // Clase que realiza cálculos y lógica de negocio
 
                     // Crear una instancia del formulario FrmPayroll, pasando los objetos necesarios
                     FrmPayroll payrollForm = new FrmPayroll();

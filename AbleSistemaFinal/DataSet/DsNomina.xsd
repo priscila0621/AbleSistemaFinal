@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DsNomina" targetNamespace="http://tempuri.org/DsNomina.xsd" xmlns:mstns="http://tempuri.org/DsNomina.xsd" xmlns="http://tempuri.org/DsNomina.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DsNomina" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_UserDSName="DsNomina" msprop:Generator_DataSetName="DsNomina">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="PayrollDt" msprop:Generator_RowEvHandlerName="PayrollDtRowChangeEventHandler" msprop:Generator_RowDeletedName="PayrollDtRowDeleted" msprop:Generator_RowDeletingName="PayrollDtRowDeleting" msprop:Generator_RowEvArgName="PayrollDtRowChangeEvent" msprop:Generator_TablePropName="PayrollDt" msprop:Generator_RowChangedName="PayrollDtRowChanged" msprop:Generator_RowChangingName="PayrollDtRowChanging" msprop:Generator_TableClassName="PayrollDtDataTable" msprop:Generator_RowClassName="PayrollDtRow" msprop:Generator_TableVarName="tablePayrollDt" msprop:Generator_UserTableName="PayrollDt">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Id" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_UserColumnName="Id" type="xs:int" minOccurs="0" />
+              <xs:element name="Name" msprop:Generator_ColumnPropNameInRow="Name" msprop:Generator_ColumnPropNameInTable="NameColumn" msprop:Generator_ColumnVarNameInTable="columnName" msprop:Generator_UserColumnName="Name" type="xs:string" minOccurs="0" />
+              <xs:element name="BaseSalary" msdata:Caption="TotalSalary" msprop:Generator_ColumnPropNameInRow="BaseSalary" msprop:Generator_ColumnPropNameInTable="BaseSalaryColumn" msprop:Generator_ColumnVarNameInTable="columnBaseSalary" msprop:Generator_UserColumnName="BaseSalary" type="xs:decimal" minOccurs="0" />
+              <xs:element name="OvertimeHours" msdata:Caption="NetSalary" msprop:Generator_ColumnPropNameInRow="OvertimeHours" msprop:Generator_ColumnPropNameInTable="OvertimeHoursColumn" msprop:Generator_ColumnVarNameInTable="columnOvertimeHours" msprop:Generator_UserColumnName="OvertimeHours" type="xs:decimal" minOccurs="0" />
+              <xs:element name="OvertimePayRate" msprop:Generator_ColumnPropNameInRow="OvertimePayRate" msprop:Generator_ColumnPropNameInTable="OvertimePayRateColumn" msprop:Generator_ColumnVarNameInTable="columnOvertimePayRate" msprop:Generator_UserColumnName="OvertimePayRate" type="xs:string" minOccurs="0" />
+              <xs:element name="Bonus" msprop:Generator_ColumnPropNameInRow="Bonus" msprop:Generator_ColumnPropNameInTable="BonusColumn" msprop:Generator_ColumnVarNameInTable="columnBonus" msprop:Generator_UserColumnName="Bonus" type="xs:string" minOccurs="0" />
+              <xs:element name="INSSDeduction" msprop:Generator_ColumnPropNameInRow="INSSDeduction" msprop:Generator_ColumnPropNameInTable="INSSDeductionColumn" msprop:Generator_ColumnVarNameInTable="columnINSSDeduction" msprop:Generator_UserColumnName="INSSDeduction" type="xs:string" minOccurs="0" />
+              <xs:element name="IRDeduction" msprop:Generator_ColumnPropNameInRow="IRDeduction" msprop:Generator_ColumnPropNameInTable="IRDeductionColumn" msprop:Generator_ColumnVarNameInTable="columnIRDeduction" msprop:Generator_UserColumnName="IRDeduction" type="xs:string" minOccurs="0" />
+              <xs:element name="TotalSalary" msprop:Generator_ColumnPropNameInRow="TotalSalary" msprop:Generator_ColumnPropNameInTable="TotalSalaryColumn" msprop:Generator_ColumnVarNameInTable="columnTotalSalary" msprop:Generator_UserColumnName="TotalSalary" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

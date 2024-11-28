@@ -70,12 +70,13 @@
             // 
             // BtnRequestReport
             // 
-            this.BtnRequestReport.Location = new System.Drawing.Point(146, 204);
+            this.BtnRequestReport.Location = new System.Drawing.Point(138, 205);
             this.BtnRequestReport.Name = "BtnRequestReport";
-            this.BtnRequestReport.Size = new System.Drawing.Size(75, 23);
+            this.BtnRequestReport.Size = new System.Drawing.Size(92, 29);
             this.BtnRequestReport.TabIndex = 3;
             this.BtnRequestReport.Text = "Solicitar";
             this.BtnRequestReport.UseVisualStyleBackColor = true;
+            this.BtnRequestReport.Click += new System.EventHandler(this.BtnRequestReport_Click);
             // 
             // FrmRequestReport
             // 

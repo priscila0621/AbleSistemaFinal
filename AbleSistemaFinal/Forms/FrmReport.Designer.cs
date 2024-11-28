@@ -28,24 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.ReportViewer = new Microsoft.Reporting.WinForms.ReportViewer();
             this.SuspendLayout();
             // 
-            // reportViewer1
+            // ReportViewer
             // 
-            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.reportViewer1.Location = new System.Drawing.Point(0, 0);
-            this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(800, 450);
-            this.reportViewer1.TabIndex = 0;
+            this.ReportViewer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ReportViewer.Location = new System.Drawing.Point(0, 0);
+            this.ReportViewer.Name = "ReportViewer";
+            this.ReportViewer.ServerReport.BearerToken = null;
+            this.ReportViewer.Size = new System.Drawing.Size(800, 450);
+            this.ReportViewer.TabIndex = 0;
+            this.ReportViewer.Load += new System.EventHandler(this.reportViewer1_Load);
             // 
             // FrmReport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.reportViewer1);
+            this.Controls.Add(this.ReportViewer);
             this.Name = "FrmReport";
             this.Text = "Reportes";
             this.Load += new System.EventHandler(this.FrmReport_Load);
@@ -55,6 +56,6 @@
 
         #endregion
 
-        public Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
+        public Microsoft.Reporting.WinForms.ReportViewer ReportViewer;
     }
 }

@@ -168,20 +168,5 @@ namespace AbleSistemaFinal.Forms
             employeeregisterForm.Show();
         }
 
-        private void BtnReportRegister_Click(object sender, EventArgs e)
-        {
-            ReportDataSource dataSource = new ReportDataSource("DsEmployee", DgvRegister);
-
-            FrmReport frmReport = new FrmReport();
-            frmReport.reportViewer1.LocalReport.DataSources.Clear();
-            frmReport.reportViewer1.LocalReport.DataSources.Add(dataSource);
-            //Configurar archivo reporte
-            frmReport.reportViewer1.LocalReport.ReportEmbeddedResource = "AbleSistemaFinal.Reports.RptEmployeeRegister.rdlc";
-            //Refrescar reporte
-            frmReport.reportViewer1.RefreshReport();
-
-            //Visualizar formulario
-            frmReport.ShowDialog();
-        }
     }
 }

@@ -34,7 +34,6 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.MnuRegister = new System.Windows.Forms.ToolStripMenuItem();
             this.MnuSeeRegister = new System.Windows.Forms.ToolStripMenuItem();
-            this.BtnReportRegister = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DgvRegister)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -92,22 +91,11 @@
             this.MnuSeeRegister.Size = new System.Drawing.Size(78, 20);
             this.MnuSeeRegister.Text = "Ver registro";
             // 
-            // BtnReportRegister
-            // 
-            this.BtnReportRegister.Location = new System.Drawing.Point(445, 36);
-            this.BtnReportRegister.Name = "BtnReportRegister";
-            this.BtnReportRegister.Size = new System.Drawing.Size(75, 23);
-            this.BtnReportRegister.TabIndex = 18;
-            this.BtnReportRegister.Text = "Ver reporte";
-            this.BtnReportRegister.UseVisualStyleBackColor = true;
-            this.BtnReportRegister.Click += new System.EventHandler(this.BtnReportRegister_Click);
-            // 
             // FrmRegister
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.BtnReportRegister);
             this.Controls.Add(this.DgvRegister);
             this.Controls.Add(this.BtnDelete);
             this.Controls.Add(this.BtnEdit);
@@ -132,6 +120,5 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem MnuRegister;
         private System.Windows.Forms.ToolStripMenuItem MnuSeeRegister;
-        private System.Windows.Forms.Button BtnReportRegister;
     }
 }

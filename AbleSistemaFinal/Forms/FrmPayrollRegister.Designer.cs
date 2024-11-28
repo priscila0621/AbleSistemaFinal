@@ -34,7 +34,6 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.MnuPayroll = new System.Windows.Forms.ToolStripMenuItem();
             this.MnuPayrollRegister = new System.Windows.Forms.ToolStripMenuItem();
-            this.BtnReportPayroll = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DgvPayrollRegister)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -91,22 +90,11 @@
             this.MnuPayrollRegister.Size = new System.Drawing.Size(129, 20);
             this.MnuPayrollRegister.Text = "Registros de Nómina";
             // 
-            // BtnReportPayroll
-            // 
-            this.BtnReportPayroll.Location = new System.Drawing.Point(471, 19);
-            this.BtnReportPayroll.Name = "BtnReportPayroll";
-            this.BtnReportPayroll.Size = new System.Drawing.Size(75, 23);
-            this.BtnReportPayroll.TabIndex = 20;
-            this.BtnReportPayroll.Text = "Ver reporte";
-            this.BtnReportPayroll.UseVisualStyleBackColor = true;
-            this.BtnReportPayroll.Click += new System.EventHandler(this.BtnReportPayroll_Click);
-            // 
             // FrmPayrollRegister
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.BtnReportPayroll);
             this.Controls.Add(this.BtnDelete);
             this.Controls.Add(this.BtnEdit);
             this.Controls.Add(this.DgvPayrollRegister);
@@ -115,6 +103,7 @@
             this.MinimizeBox = false;
             this.Name = "FrmPayrollRegister";
             this.Text = "FrmPayrollRegister";
+            this.Load += new System.EventHandler(this.FrmPayrollRegister_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DgvPayrollRegister)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -131,6 +120,5 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem MnuPayroll;
         private System.Windows.Forms.ToolStripMenuItem MnuPayrollRegister;
-        private System.Windows.Forms.Button BtnReportPayroll;
     }
 }

@@ -91,20 +91,9 @@ namespace AbleSistemaFinal.Forms
             Close();
         }
 
-        private void BtnReportPayroll_Click(object sender, EventArgs e)
+        private void FrmPayrollRegister_Load(object sender, EventArgs e)
         {
-            ReportDataSource dataSource = new ReportDataSource("DsPayroll", DgvPayrollRegister);
-
-            FrmReport frmReport = new FrmReport();
-            frmReport.reportViewer1.LocalReport.DataSources.Clear();
-            frmReport.reportViewer1.LocalReport.DataSources.Add(dataSource);
-            //Configurar archivo reporte
-            frmReport.reportViewer1.LocalReport.ReportEmbeddedResource = "AbleSistemaFinal.Reports.RptPayroll.rdlc";
-            //Refrescar reporte
-            frmReport.reportViewer1.RefreshReport();
-
-            //Visualizar formulario
-            frmReport.ShowDialog();
+            LoadData();
         }
     }
 }

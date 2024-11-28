@@ -4,26 +4,28 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using AbleSistemaFinal.Models;
+using AbleSistemaFinal.Services;
 
 namespace AbleSistemaFinal.Dao
 {
     public class PayrollDao
     {
-        private List<EmployeePayroll> employees = new List<EmployeePayroll>();
+        private readonly string PayrollFilePath = "payroll.dat";
+        private FileHelper fileHelper = new FileHelper();
 
-        // Agregar un empleado a la lista
+        private List<EmployeePayroll> employees = LoadPayrollFromFile();
+
         public void AddEmployee(EmployeePayroll employee)
         {
             employees.Add(employee);
+            SavePayrollToFile();
         }
 
-        // Obtener todos los empleados
         public List<EmployeePayroll> GetAllEmployees()
         {
             return employees;
         }
 
-        // Editar empleado
         public void UpdateEmployee(EmployeePayroll updatedEmployee)
         {
             var employee = employees.Find(e => e.Id == updatedEmployee.Id);
@@ -37,13 +39,24 @@ namespace AbleSistemaFinal.Dao
                 employee.INSSDeduction = updatedEmployee.INSSDeduction;
                 employee.IRDeduction = updatedEmployee.IRDeduction;
                 employee.TotalSalary = updatedEmployee.TotalSalary;
+                SavePayrollToFile();
             }
         }
 
-        // Eliminar empleado
         public void DeleteEmployee(string id)
         {
             employees.RemoveAll(e => e.Id == id);
+            SavePayrollToFile();
+        }
+
+        private void SavePayrollToFile()
+        {
+            fileHelper.SavePayroll(employees, PayrollFilePath);
+        }
+
+        private static List<EmployeePayroll> LoadPayrollFromFile()
+        {
+            return new FileHelper().LoadPayroll("payroll.dat");
         }
     }
 }

@@ -4,21 +4,27 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using AbleSistemaFinal.Models;
+using AbleSistemaFinal.Services;
 
 namespace AbleSistemaFinal.Dao
 {
     public static class EmployeeDao
     {
-        public static List<Employee> Employees = new List<Employee>();
+        private static readonly string EmployeeFilePath = "employees.dat";
+        private static FileHelper fileHelper = new FileHelper();
+
+        public static List<Employee> Employees = LoadEmployeesFromFile();
 
         public static void AddEmployee(Employee employee)
         {
             Employees.Add(employee);
+            SaveEmployeesToFile();
         }
 
         public static void DeleteEmployee(string employeeId)
         {
             Employees.RemoveAll(e => e.EmployeeID == employeeId);
+            SaveEmployeesToFile();
         }
 
         public static Employee GetEmployee(string employeeId)
@@ -30,19 +36,16 @@ namespace AbleSistemaFinal.Dao
         {
             return Employees;
         }
-        // Método para actualizar un empleado existente
+
         public static bool UpdateEmployee(Employee updatedEmployee)
         {
-            // Buscar el empleado en la lista por su ID
             var existingEmployee = Employees.FirstOrDefault(emp => emp.EmployeeID == updatedEmployee.EmployeeID);
 
             if (existingEmployee == null)
             {
-                // Si no se encuentra, retornar false
                 return false;
             }
 
-            // Actualizar los datos del empleado
             existingEmployee.Names = updatedEmployee.Names;
             existingEmployee.LastNames = updatedEmployee.LastNames;
             existingEmployee.IdNumber = updatedEmployee.IdNumber;
@@ -53,7 +56,18 @@ namespace AbleSistemaFinal.Dao
             existingEmployee.Area = updatedEmployee.Area;
             existingEmployee.HiringDate = updatedEmployee.HiringDate;
 
-            return true; // Indicar que la actualización fue exitosa
+            SaveEmployeesToFile();
+            return true;
+        }
+
+        private static void SaveEmployeesToFile()
+        {
+            fileHelper.SaveEmployees(Employees, EmployeeFilePath);
+        }
+
+        private static List<Employee> LoadEmployeesFromFile()
+        {
+            return fileHelper.LoadEmployees(EmployeeFilePath);
         }
     }
 }

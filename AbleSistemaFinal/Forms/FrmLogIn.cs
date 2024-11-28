@@ -69,8 +69,9 @@ namespace AbleSistemaFinal.Forms
                     // Salir del flujo actual si es parte de un menú u otro sistema
                     break;
                 case "Principal":
-                    MessageBox.Show("Bienvenida, Directora.");
-                    // Aquí puedes abrir el formulario correspondiente para Dirección si lo necesitas
+                    FrmRequestReport requestreportForm = new FrmRequestReport();
+                    requestreportForm.ShowDialog();
+                    MessageBox.Show("Bienvenida, Directora.");                    
                     break;
             }
 

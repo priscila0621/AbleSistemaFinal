@@ -117,7 +117,7 @@ namespace AbleSistemaFinal.Forms
                 return false;
             }
 
-            if (TbIdNumber.Text.Length != 19)
+            if (TbIdNumber.Text.Length != 14)
             {
                 MessageBox.Show("Ingrese una cédula válida", "Error de Validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;

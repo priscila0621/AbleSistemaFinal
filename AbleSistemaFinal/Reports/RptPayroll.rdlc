@@ -646,7 +646,7 @@
         <Top>0.73766cm</Top>
         <Left>0.98573cm</Left>
         <Height>1.2cm</Height>
-        <Width>26.25708cm</Width>
+        <Width>26.25707cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -735,7 +735,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>=Format(now, "dd/MM/yyy")</Value>
+                  <Value>=Format(now, "dd/MM/yyy HH:mm")</Value>
                   <Style />
                 </TextRun>
               </TextRuns>

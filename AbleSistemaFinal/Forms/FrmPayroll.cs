@@ -17,7 +17,7 @@ namespace AbleSistemaFinal.Forms
     {
         private PayrollDao payrollDao = new PayrollDao();
         private EmployeePayrollDao payrollService = new EmployeePayrollDao();
-
+        private ErrorProvider errorProvider = new ErrorProvider(); // ErrorProvider para mostrar los errores
         public FrmPayroll()
         {
             InitializeComponent();
@@ -31,6 +31,10 @@ namespace AbleSistemaFinal.Forms
         {
             try
             {
+                // Limpiar los errores previos
+                errorProvider.Clear();
+
+                
                 // Crear el modelo desde los datos del formulario
                 var employee = new EmployeePayroll
                 {
@@ -115,6 +119,78 @@ namespace AbleSistemaFinal.Forms
             // Mostrar deducciones existentes
             LblINSS.Text = employee.INSSDeduction.ToString("C");
             LblIR.Text = employee.IRDeduction.ToString("C");
+        }
+
+        private void TbId_TextChanged(object sender, EventArgs e)
+        {
+            if (TbId.Text.Length != 8)
+            {
+                errorProvider.SetError(TbId, "El ID debe tener exactamente 8 caracteres.");
+            }
+            else
+            {
+                errorProvider.SetError(TbId, string.Empty); // Limpiar el error si es válido
+            }
+        }
+
+        private void TbName_TextChanged(object sender, EventArgs e)
+        {
+            if (!System.Text.RegularExpressions.Regex.IsMatch(TbName.Text, @"^[a-zA-Z\s]+$"))
+            {
+                errorProvider.SetError(TbName, "El nombre solo puede contener letras y espacios.");
+            }
+            else
+            {
+                errorProvider.SetError(TbName, string.Empty); // Limpiar el error si es válido
+            }
+        }
+
+        private void TbBaseSalary_TextChanged(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(TbBaseSalary.Text) || !decimal.TryParse(TbBaseSalary.Text, out _))
+            {
+                errorProvider.SetError(TbBaseSalary, "Por favor, ingrese un salario válido.");
+            }
+            else
+            {
+                errorProvider.SetError(TbBaseSalary, string.Empty); // Limpiar el error si es válido
+            }
+        }
+
+        private void TbOvertimePay_TextChanged(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(TbOvertimePay.Text) || !decimal.TryParse(TbOvertimePay.Text, out _))
+            {
+                errorProvider.SetError(TbOvertimePay, "Por favor, ingrese un valor válido para la tarifa de horas extra.");
+            }
+            else
+            {
+                errorProvider.SetError(TbOvertimePay, string.Empty); // Limpiar el error si es válido
+            }
+        }
+
+        private void TbOvertime_TextChanged(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(TbOvertime.Text) || !decimal.TryParse(TbOvertime.Text, out _))
+            {
+                errorProvider.SetError(TbOvertime, "Por favor, ingrese un valor válido para horas extra.");
+            }
+            else
+            {
+                errorProvider.SetError(TbOvertime, string.Empty); // Limpiar el error si es válido
+            }
+        }
+
+        private void TbBonus_TextChanged(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(TbBonus.Text) || !decimal.TryParse(TbBonus.Text, out _))
+            {
+                errorProvider.SetError(TbBonus, "Por favor, ingrese un valor válido para la bonificación.");
+            }
+            else
+            {
+                errorProvider.SetError(TbBonus, string.Empty); // Limpiar el error si es válido
+            }
         }
     }
 }

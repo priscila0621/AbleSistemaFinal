@@ -108,6 +108,7 @@
             this.TbName.Size = new System.Drawing.Size(213, 22);
             this.TbName.TabIndex = 2;
             this.TbName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TbName.TextChanged += new System.EventHandler(this.TbName_TextChanged);
             // 
             // LblNetSalary
             // 
@@ -137,6 +138,7 @@
             this.TbOvertimePay.Size = new System.Drawing.Size(65, 22);
             this.TbOvertimePay.TabIndex = 4;
             this.TbOvertimePay.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TbOvertimePay.TextChanged += new System.EventHandler(this.TbOvertimePay_TextChanged);
             // 
             // label13
             // 
@@ -176,6 +178,7 @@
             this.TbBonus.Size = new System.Drawing.Size(65, 22);
             this.TbBonus.TabIndex = 6;
             this.TbBonus.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TbBonus.TextChanged += new System.EventHandler(this.TbBonus_TextChanged);
             // 
             // label9
             // 
@@ -268,6 +271,7 @@
             this.TbOvertime.Size = new System.Drawing.Size(65, 22);
             this.TbOvertime.TabIndex = 5;
             this.TbOvertime.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TbOvertime.TextChanged += new System.EventHandler(this.TbOvertime_TextChanged);
             // 
             // label3
             // 
@@ -297,6 +301,7 @@
             this.TbBaseSalary.Size = new System.Drawing.Size(83, 22);
             this.TbBaseSalary.TabIndex = 3;
             this.TbBaseSalary.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TbBaseSalary.TextChanged += new System.EventHandler(this.TbBaseSalary_TextChanged);
             // 
             // label2
             // 
@@ -316,6 +321,7 @@
             this.TbId.Size = new System.Drawing.Size(86, 22);
             this.TbId.TabIndex = 1;
             this.TbId.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TbId.TextChanged += new System.EventHandler(this.TbId_TextChanged);
             // 
             // label8
             // 

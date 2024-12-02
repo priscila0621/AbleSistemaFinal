@@ -7,7 +7,7 @@
     <ProjectGuid>{03B27FF1-1707-45FC-871E-D3ADF81456F7}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>AbleSistemaFinal</RootNamespace>
-    <AssemblyName>AbleSistemaFinal</AssemblyName>
+    <AssemblyName>Sistema de nómina Able</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -31,6 +31,9 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Red-and-Black-Modern-Illustrative-Education-Logo-_3_.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
@@ -215,6 +218,12 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="owl-_1_.ico" />
+    <Content Include="Red-and-Black-Modern-Illustrative-Education-Logo-_3_.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Referencias\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

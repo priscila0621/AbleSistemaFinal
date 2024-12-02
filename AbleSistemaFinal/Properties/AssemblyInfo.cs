@@ -5,13 +5,13 @@ using System.Runtime.InteropServices;
 // La información general de un ensamblado se controla mediante el siguiente 
 // conjunto de atributos. Cambie estos valores de atributo para modificar la información
 // asociada con un ensamblado.
-[assembly: AssemblyTitle("AbleSistemaFinal")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("Sistema de nómina Able")]
+[assembly: AssemblyDescription("Este proyecto tiene como fin ayudar a la escuela SmartKids en su implementación y cálculo de salario para sus empleados. Un sistema que les dara un mejor control sobre sus empleados y sus respectivos pagos, con la ayuda de los formularios creados y reportes que se solicitarán.")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("AbleSistemaFinal")]
+[assembly: AssemblyCompany("Priscila Selva-Gabriela Guerrero")]
+[assembly: AssemblyProduct("Sistema de nómina Able")]
 [assembly: AssemblyCopyright("Copyright ©  2024")]
-[assembly: AssemblyTrademark("")]
+[assembly: AssemblyTrademark("Progreso para el futuro")]
 [assembly: AssemblyCulture("")]
 
 // Si establece ComVisible en false, los tipos de este ensamblado no estarán visibles 

@@ -110,6 +110,7 @@
             this.Controls.Add(this.TbPw);
             this.Controls.Add(this.TbId);
             this.Controls.Add(this.pictureBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmLogIn";

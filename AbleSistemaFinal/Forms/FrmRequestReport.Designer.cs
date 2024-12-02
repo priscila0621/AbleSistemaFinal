@@ -50,7 +50,7 @@
             this.RbEmployeeRegister.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RbEmployeeRegister.Location = new System.Drawing.Point(52, 104);
             this.RbEmployeeRegister.Name = "RbEmployeeRegister";
-            this.RbEmployeeRegister.Size = new System.Drawing.Size(188, 20);
+            this.RbEmployeeRegister.Size = new System.Drawing.Size(191, 20);
             this.RbEmployeeRegister.TabIndex = 1;
             this.RbEmployeeRegister.TabStop = true;
             this.RbEmployeeRegister.Text = "Registro de empleados";
@@ -62,7 +62,7 @@
             this.RbPayrollRegister.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RbPayrollRegister.Location = new System.Drawing.Point(52, 148);
             this.RbPayrollRegister.Name = "RbPayrollRegister";
-            this.RbPayrollRegister.Size = new System.Drawing.Size(267, 20);
+            this.RbPayrollRegister.Size = new System.Drawing.Size(273, 20);
             this.RbPayrollRegister.TabIndex = 2;
             this.RbPayrollRegister.TabStop = true;
             this.RbPayrollRegister.Text = "Registro de Nómina de empleados";
@@ -87,6 +87,8 @@
             this.Controls.Add(this.RbPayrollRegister);
             this.Controls.Add(this.RbEmployeeRegister);
             this.Controls.Add(this.label1);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FrmRequestReport";
             this.Text = "FrmRequestReport";
             this.ResumeLayout(false);

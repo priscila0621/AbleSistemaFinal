@@ -73,6 +73,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DsEmpleado.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DataSet\DsNomina.cs">
+      <DependentUpon>DsNomina.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DataSet\DsNomina.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

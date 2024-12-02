@@ -34,6 +34,7 @@
             // ReportViewer
             // 
             this.ReportViewer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ReportViewer.LocalReport.ReportEmbeddedResource = "AbleSistemaFinal.Reports.RptPayroll.rdlc";
             this.ReportViewer.Location = new System.Drawing.Point(0, 0);
             this.ReportViewer.Name = "ReportViewer";
             this.ReportViewer.ServerReport.BearerToken = null;
@@ -47,6 +48,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.ReportViewer);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FrmReport";
             this.Text = "Reportes";
             this.Load += new System.EventHandler(this.FrmReport_Load);

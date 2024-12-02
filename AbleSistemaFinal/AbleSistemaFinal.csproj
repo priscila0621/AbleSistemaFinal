@@ -13,7 +13,7 @@
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
     <IsWebBootstrapper>false</IsWebBootstrapper>
-    <PublishUrl>C:\Users\Kagab\Desktop\</PublishUrl>
+    <PublishUrl>C:\Users\DELL E7250\Desktop\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>false</UpdateEnabled>
@@ -52,16 +52,22 @@
     <ApplicationIcon>Red-and-Black-Modern-Illustrative-Education-Logo-_3_.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>7F591C81C7FDA01AE069C6E0B4A81E6EBA130589</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>D9E7620A3FE037F211BB57099B5FC5E325945B4A</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestKeyFile>AbleSistemaFinal_TemporaryKey.pfx</ManifestKeyFile>
+    <ManifestKeyFile>AbleSistemaFinal_1_TemporaryKey.pfx</ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
-    <GenerateManifests>true</GenerateManifests>
+    <GenerateManifests>false</GenerateManifests>
   </PropertyGroup>
   <PropertyGroup>
     <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
@@ -210,6 +216,7 @@
     </Compile>
     <EmbeddedResource Include="Reports\RptEmployeeRegister.rdlc" />
     <EmbeddedResource Include="Reports\RptPayroll.rdlc" />
+    <None Include="AbleSistemaFinal_1_TemporaryKey.pfx" />
     <None Include="AbleSistemaFinal_TemporaryKey.pfx" />
     <None Include="DataSet\DsEmpleado.xsc">
       <DependentUpon>DsEmpleado.xsd</DependentUpon>
@@ -234,6 +241,7 @@
       <DependentUpon>DsNomina.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
+    <None Include="Properties\app.manifest" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -257,7 +265,7 @@
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
       <Visible>False</Visible>
-      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 y x64%29</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
     <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">

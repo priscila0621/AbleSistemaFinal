@@ -9,6 +9,7 @@ namespace AbleSistemaFinal.Dao
 {
     public static class UserDao
     {
+        // Lista estática de usuarios predefinidos con sus credenciales y roles
         public static List<User> Users = new List<User>
         {
             new User { Id = "admin1", Password = "admin123", Role = "Admin" },
@@ -20,6 +21,7 @@ namespace AbleSistemaFinal.Dao
 
         public static User Authenticate(string id, string password)
         {
+            // Busca un usuario en la lista que coincida con el ID y la contraseña proporcionados
             return Users.Find(user => user.Id == id && user.Password == password);
         }
     }

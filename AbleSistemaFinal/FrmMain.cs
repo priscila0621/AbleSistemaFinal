@@ -55,5 +55,13 @@ namespace AbleSistemaFinal
             logInForm.ShowDialog();
         }
 
+        private void BtnAbout_Click(object sender, EventArgs e)
+        {
+            // Crear una instancia del formulario FrmAbout
+            FrmAbout aboutForm = new FrmAbout();
+
+            // Mostrar el formulario FrmAbout
+            aboutForm.ShowDialog();
+        }
     }
 }

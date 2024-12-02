@@ -35,7 +35,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.SidePanel = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.BtnAbout = new System.Windows.Forms.Button();
             this.BtnPrincipal = new System.Windows.Forms.Button();
             this.BtnAdministration = new System.Windows.Forms.Button();
             this.BtnCoordination = new System.Windows.Forms.Button();
@@ -78,7 +78,7 @@
             this.panel1.BackColor = System.Drawing.Color.Maroon;
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.SidePanel);
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.BtnAbout);
             this.panel1.Controls.Add(this.BtnPrincipal);
             this.panel1.Controls.Add(this.BtnAdministration);
             this.panel1.Controls.Add(this.BtnCoordination);
@@ -104,20 +104,21 @@
             this.SidePanel.Size = new System.Drawing.Size(10, 54);
             this.SidePanel.TabIndex = 1;
             // 
-            // button1
+            // BtnAbout
             // 
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Bookman Old Style", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(12, 404);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(28, 24);
-            this.button1.TabIndex = 0;
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button1.UseVisualStyleBackColor = true;
+            this.BtnAbout.FlatAppearance.BorderSize = 0;
+            this.BtnAbout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnAbout.Font = new System.Drawing.Font("Bookman Old Style", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnAbout.ForeColor = System.Drawing.Color.White;
+            this.BtnAbout.Image = ((System.Drawing.Image)(resources.GetObject("BtnAbout.Image")));
+            this.BtnAbout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnAbout.Location = new System.Drawing.Point(12, 404);
+            this.BtnAbout.Name = "BtnAbout";
+            this.BtnAbout.Size = new System.Drawing.Size(28, 24);
+            this.BtnAbout.TabIndex = 0;
+            this.BtnAbout.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.BtnAbout.UseVisualStyleBackColor = true;
+            this.BtnAbout.Click += new System.EventHandler(this.BtnAbout_Click);
             // 
             // BtnPrincipal
             // 
@@ -198,7 +199,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel SidePanel;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button BtnAbout;
         private System.Windows.Forms.Button BtnPrincipal;
         private System.Windows.Forms.Button BtnAdministration;
         private System.Windows.Forms.Button BtnCoordination;

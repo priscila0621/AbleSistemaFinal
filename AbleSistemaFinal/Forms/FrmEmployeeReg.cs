@@ -199,6 +199,18 @@ namespace AbleSistemaFinal.Forms
             registerForm.Show();
 
         }
+
+        private void TbID_TextChanged(object sender, EventArgs e)
+        {
+            if (TbID.Text.Length != 8)
+            {
+                errorProvider.SetError(TbID, "El ID debe tener exactamente 8 caracteres.");
+            }
+            else
+            {
+                errorProvider.SetError(TbID, string.Empty); // Limpiar el error si es válido
+            }
+        }
     }
 
 }

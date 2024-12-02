@@ -115,6 +115,7 @@
             this.TbID.Size = new System.Drawing.Size(83, 22);
             this.TbID.TabIndex = 8;
             this.TbID.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TbID.TextChanged += new System.EventHandler(this.TbID_TextChanged);
             // 
             // label1
             // 
